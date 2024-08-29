@@ -28,7 +28,7 @@ ul, li {
 }
 .top-container {
     background-color: #2c2b2b;
-    color: #ffffff;
+    color: #343434;
     text-align: center;
     padding: 20px;
     padding-bottom: 10px;
@@ -158,4 +158,31 @@ ul, li {
 }
 .cert-section{
     padding-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 300px;
+
+}
+.hire-button {
+    background-color: #343434;
+    color: #ff6666;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    justify-content: left;
+    align-self: center;
+}
+
+.hire-button:hover {
+    background-color: #ff5555;
+    color:#343434
 }
