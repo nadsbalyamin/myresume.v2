@@ -1,7 +1,20 @@
-body, h1, h2, h3, h4, p {
+body{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    background-color: #343434;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #434343, #2c2b2b);
+}
+ 
+ h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    
 }
 h1 {
     font-family: 'Roboto', sans-serif;
@@ -11,7 +24,6 @@ h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: #ff6666;
-    margin-top: 30px;
 }
 h3, h4 {
     font-weight: 600;
@@ -34,6 +46,7 @@ ul, li {
     padding-bottom: 10px;
     background-image: linear-gradient(to right, #434343, #2c2b2b);
 }
+
 .image-section img {
     width: 200px;
     height: 200px;
@@ -45,8 +58,8 @@ ul, li {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .contact-section {
-    padding-left: 300px;
-    text-align: left;
+    text-align: left;   
+    margin-top: 50px;
 }
 .contact-section h1, h3, p {
     color: #ffbbbb;
@@ -57,6 +70,28 @@ ul, li {
 }
 .contact-link:hover {
     text-decoration: underline;
+}
+.social-media {
+    display: flex;
+    justify-content: left; 
+    align-items: center; 
+    gap: 10px; 
+    margin: 0; 
+}
+
+.social-media a {
+    color: #ffbbbb; 
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; 
+}
+
+.social-media a:hover {
+    color: #000; 
+    transform: scale(1.2); 
+}
+
+.social-media i {
+    font-size: 24px; 
 }
 .left-column, .right-column {
     padding: 20px;
@@ -159,30 +194,234 @@ ul, li {
 .cert-section{
     padding-bottom: 10px;
 }
-
-.social-media {
-    display: flex;
-    justify-content: left;
-    gap: 10px;
-    margin-top: 20px;
-    margin-left: 300px;
-
+.cert-card h3 a {
+    color: #ff6666; 
+    text-decoration: none; 
+    transition: color 0.3s; 
 }
-.hire-button {
+
+.cert-card h3 a:hover {
+    color: #000; 
+}
+.tab-container {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    margin-left: auto;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab-button {
     background-color: #343434;
     color: #ff6666;
     padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    font-size: 16px;
-    text-decoration: none;
-    display: inline-block;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: 'Roboto', sans-serif;
-    justify-content: left;
-    align-self: center;
+    font-size: 16px;
 }
 
-.hire-button:hover {
+.tab-button:hover {
     background-color: #ff5555;
-    color:#343434
+    color: #343434;
+}
+
+.tab-content {
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+
+.right-column {
+    flex: 2;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.tab-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab-button {
+    background-color: #343434;
+    color: #ff6666;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.tab-button:hover {
+    background-color: #d49a9a;
+    color: #343434;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+.education-section, .skills-section, .cert-section, .contact-me-section {
+    margin-bottom: 20px;
+}
+
+.skills-section ul {
+    padding-left: 20px;
+}
+
+.programming-section ul, .software-section ol {
+    padding-left: 20px;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 5px 0;
+    height: 5px;
+    position: relative;
+}
+
+.skill-level {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.beginner {
+    width: 30%;
+}
+
+.intermediate {
+    width: 60%;
+}
+
+.advanced {
+    width: 90%;
+}
+
+.skill-circle {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#ff6666 0% 60%, #e0e0e0 60% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 5px;
+}
+
+.inner-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #343434;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffbbbb;
+    font-size: 18px;
+    position: relative;
+}
+
+.cert-card {
+    background-color: #444;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.contact-section {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 2s ease-out forwards; 
+}
+@media (max-width: 768px) {
+    .top-container {
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .image-section img {
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+
+    .contact-section {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        margin-right: 0;
+    }
+
+    .social-media {
+        justify-content: center;
+        margin-left: 0;
+    }
+}
+@media (max-width: 480px) {
+    .tab-button {
+        padding: 8px 1px;
+        font-size: 14px; 
+    }
+
+    .tab-content {
+        padding: 15px; 
+    }
 }
