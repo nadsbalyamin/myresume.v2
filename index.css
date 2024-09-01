@@ -62,7 +62,10 @@ ul, li {
     text-align: left;   
     margin-top: 50px;
 }
-.contact-section h1, h3, p {
+.contact-section h1{
+    color: #ff5555;
+}
+.contact-section h3, p {
     color: #ffbbbb;
 }
 .contact-link {
