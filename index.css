@@ -121,7 +121,7 @@ ul, li {
     right: 0;
     width: 2px;
     height: 100%;
-    background-color: #00aaff;
+    background-color: #444;
 }
 .skill-bar {
     width: 100%;
@@ -415,10 +415,10 @@ ul, li {
         margin-left: 0;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .tab-button {
         padding: 8px 1px;
-        font-size: 14px; 
+        font-size: 12px; 
     }
 
     .tab-content {
