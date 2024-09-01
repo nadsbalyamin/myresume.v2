@@ -45,6 +45,7 @@ ul, li {
     padding: 20px;
     padding-bottom: 10px;
     background-image: linear-gradient(to right, #434343, #2c2b2b);
+    box-sizing: border-box;
 }
 
 .image-section img {
@@ -100,6 +101,8 @@ ul, li {
     color: #ffffff;
     border-radius: 10px;
     margin-bottom: 20px;
+    flex: 1 1 100%; 
+    box-sizing: border-box; 
 }
 .left-column {
     flex: 1;
@@ -113,6 +116,7 @@ ul, li {
     padding: 20px;
     gap: 20px;
     background-color: #444;
+    flex-wrap: wrap;
 }
 .content-wrapper::before {
     content: "";
@@ -389,21 +393,27 @@ ul, li {
     .top-container {
         text-align: center;
         padding-left: 0;
+        font-size: small;
     }
     
     .image-section img {
         margin: 0 auto;
         display: block;
         float: none;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
     }
 
     .contact-section {
         padding-left: 0;
         text-align: center;
+        padding: 0 10px;
     }
 
     .content-wrapper {
         flex-direction: column;
+        padding: 10px; 
     }
 
     .left-column, .right-column {
@@ -414,8 +424,6 @@ ul, li {
         justify-content: center;
         margin-left: 0;
     }
-}
-@media (max-width: 768px) {
     .tab-button {
         padding: 8px 1px;
         font-size: 12px; 
