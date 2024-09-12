@@ -116,7 +116,7 @@
 
                     // Initialize DataTable
                     var table = $(`#${tableId}`).DataTable({
-                        ajax: '../assets/ajax/array.txt', // Ensure this path is correct
+                        ajax: 'assets/data/data.json', // Ensure this path is correct
                         initComplete: function () {
                             // Apply the search
                             this.api().columns().every(function (index) {
